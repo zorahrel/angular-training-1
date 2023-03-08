@@ -16,5 +16,6 @@ export class ToBuyService {
 
   changeQuantity(index: number, quantity: number) {
     this.toBuy[index].quantity = quantity;
+    // TODO: if quantity is 0 remove item from list
   }
 }
