@@ -1,1 +1,3 @@
 <div *ngFor="let item of getItems()">{{ item.title }}: {{ item.quantity }}</div>
+<button (click)="addSample()">Aggiungi da Main</button>
+<app-item-input (onNewItem)="addItem($event)"></app-item-input>

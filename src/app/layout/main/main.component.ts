@@ -10,13 +10,21 @@ export class MainComponent {
   constructor(private toBuyService: ToBuyService) {}
 
   ngOnInit() {
-    this.toBuyService.addItem({
-      title: 'Percoca',
-      quantity: 2,
-    });
+    this.addSample();
   }
 
   getItems() {
     return this.toBuyService.toBuy;
+  }
+
+  addSample() {
+    this.toBuyService.addItem({
+      title: 'Percoca',
+      quantity: Math.floor(Math.random() * 100),
+    });
+  }
+
+  addItem(item: Item) {
+    this.toBuyService.addItem(item);
   }
 }
